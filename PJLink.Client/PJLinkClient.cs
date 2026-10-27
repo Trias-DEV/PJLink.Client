@@ -169,13 +169,13 @@ public class PJLinkClient : IDisposable
 
         var initialResponse = await ReceiveResponseAsync(stream, cancellationToken);
         
-        if (initialResponse.StartsWith("PJLINK 0"))
+        if (initialResponse.StartsWith("PJLINK 0", StringComparison.OrdinalIgnoreCase))
             return (client, stream, false);
         
-        if (!initialResponse.StartsWith("PJLINK 1"))
+        if (!initialResponse.StartsWith("PJLINK 1", StringComparison.OrdinalIgnoreCase))
         {
             client.Dispose();
-            throw new InvalidOperationException("Invalid initial response format");
+            throw new InvalidOperationException($"Invalid initial response format: {initialResponse}");
         }
 
         var randomNumber = initialResponse[9..^1];
