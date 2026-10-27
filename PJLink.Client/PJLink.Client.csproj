@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>PJLink.Client</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.1.0-trias</Version>
     <Authors>Pat Hartl</Authors>
     <Description>A .NET client implementation of the PJLink protocol for projector control. Supports PJLink Class 1 specification with features like power control, input selection, and device monitoring.</Description>
     <PackageTags>pjlink;projector;control;network;tcp;automation;display;monitor</PackageTags>

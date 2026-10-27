@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Condition="'$(NETCoreSdkRuntimeIdentifier)' == 'arch-x64' or '$(NETCoreSdkRuntimeIdentifier)' == 'arch-arm64'">
+    <NETCoreSdkRuntimeIdentifier>$(NETCoreSdkPortableRuntimeIdentifier)</NETCoreSdkRuntimeIdentifier>
+    <DefaultAppHostRuntimeIdentifier>$(NETCoreSdkPortableRuntimeIdentifier)</DefaultAppHostRuntimeIdentifier>
+  </PropertyGroup>
+</Project>
